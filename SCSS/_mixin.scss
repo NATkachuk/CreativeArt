@@ -1,0 +1,19 @@
+@mixin Canella ($fs, $fw, $lh) {
+    font-family: 'Canela';
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+@mixin Inter ($fs, $fw, $lh) {
+    font-family: 'Inter';
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+@mixin flex ($fd, $jc, $ai, $gp) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gp;
+}
