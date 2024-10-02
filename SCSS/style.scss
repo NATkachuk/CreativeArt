@@ -22,16 +22,9 @@ body {
                 border-bottom: 2px solid $secondary-color;
             }
         }
-        &__btn {
-            @include Inter(16px, 700, 120%);
-            padding: 12px 40px;
-            background-color: $secondary-color;
-            border-radius: 8px;
-            color: $bacground-color;
-        }
     }
     .main {
-        @include flex(column, flex-start, center, 0px);
+        @include flex(column, flex-start, center, 140px);
         .section1 {
             @include flex(row, flex-start, flex-start, 230px);
             padding: 92px 111px;
@@ -54,13 +47,6 @@ body {
                     &__buttons{
                         @include flex(row, flex-start, center, 20px);
                         margin-top: 20px;
-                    }
-                    &__buttons-btn {
-                        @include Inter(16px, 700, 120%);
-                        padding: 12px 40px;
-                        background-color: $secondary-color;
-                        border-radius: 8px;
-                        color: $bacground-color;
                     }
                     &__buttons-btn1 {
                         @include Inter(16px, 400, 120%);
@@ -132,6 +118,76 @@ body {
               }
             }
         }
+        .section2{
+            @include flex(column, center, center, 30px);
+            &-container{
+                @include flex(row, center, center, 650px);
+                &__title{
+                    width: 35%;
+                   &--green{
+                    color: $secondary-color;
+                   }
+                }
+            }
+            .section2-cart {
+                @include flex(row, center, center, 30px);
+            }
+            &-container1{
+                @include flex(column, center, center, 23px);
+                border-top: 1px solid $secondary-color;
+                border-radius: 28px;
+                padding: 20px;
+                background-color: $third-color;
+                &-wrapper{
+                    @include flex(column, center, center, 16px);
+                    .section2__box{
+                        @include flex(row, center, center, 42px);
+                        &-text{
+                            @include Inter(24px, 700, 120%);
+                        }
+                        &-cont{
+                            @include flex(row, center, center, 4px);
+                            &-text{
+                                @include Inter(16px, 700, 120%);
+                            }
+                        }
+                    }
+                    .section2__box1{
+                        @include flex(row, center, center, 93px);
+                        &-time{
+                            @include flex(column, flex-start, flex-start, 4px);
+                            &-text1{
+                                @include Inter(14px, 400, 160%);
+                                color: $fourth-color;
+                            }
+                            &-line{
+                                @include flex(row, center, center, 14px);
+                                &-text{
+                                    @include Inter(16px, 700, 120%);
+                                }
+                            }
+                        }
+                        &-btn {
+                            @include Inter(16px, 700, 120%);
+                            border: 1px solid $secondary-color;
+                            border-radius: 8px;
+                            padding: 12px 40px;
+                            color: $secondary-color;
+                        }
+                    }
+                } 
+            }
+        }
+        .title{
+            @include Canela(48px, 500, 120%);
+        }
+    }
+    .button {
+        @include Inter(16px, 700, 120%);
+        background-color: $secondary-color;
+        border-radius: 8px;
+        color: $bacground-color;
+        padding: 12px 40px;
     }
 }
 
