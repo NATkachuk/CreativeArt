@@ -3,7 +3,137 @@
 @import './vars';
 
 
+body {
+    background-color: $bacground-color;
+    color: $main-color;
+    .header {
+        @include flex(row, space-between, center, 0px);
+        padding: 28px 111px;
+        .nav{
+            &__list {
+                @include flex(row, center, center, 40px);
+            }
+            &__link {
+                @include Inter(16px, 400, 160%);
+                text-decoration: none;
+                color: $main-color;
+            }
+            &__link:hover {
+                border-bottom: 2px solid $secondary-color;
+            }
+        }
+        &__btn {
+            @include Inter(16px, 700, 120%);
+            padding: 12px 40px;
+            background-color: $secondary-color;
+            border-radius: 8px;
+            color: $bacground-color;
+        }
+    }
+    .main {
+        @include flex(row, flex-start, center, 0px);
+        .section1 {
+            @include flex(row, flex-start, flex-start, 230px);
+            padding: 92px 111px;
+            &-container {
+                @include flex(column, flex-start, flex-start, 72px);
+                width: 41%;
+                .section1-box{
+                    @include flex(column, flex-start, flex-start, 20px);
+                    &__title {
+                        @include Canela(64px, 500, 120%);
+                        color: $main-color;
+                        &--green {
+                            color: $secondary-color;
+                        }
+                    }
+                    &__text {
+                        @include Inter(16px, 400, 160%);
+                        color: $main-color;
+                    }
+                    &__buttons{
+                        @include flex(row, flex-start, center, 20px);
+                        margin-top: 20px;
+                    }
+                    &__buttons-btn {
+                        @include Inter(16px, 700, 120%);
+                        padding: 12px 40px;
+                        background-color: $secondary-color;
+                        border-radius: 8px;
+                        color: $bacground-color;
+                    }
+                    &__buttons-btn1 {
+                        @include Inter(16px, 400, 120%);
+                        padding: 12px 40px;
+                        border-radius: 8px;
+                        color: $main-color;
+                    }
+                }
+                .section1-box1{
+                    @include flex(row, flex-start, flex-start, 20px);
+                    &__numbers{
+                        border-right: 1px solid $secondary-color;
+                        padding-right: 60px;
+                        
+                        @include flex(column, center, flex-start, 30px);
+                        &-text{
+                            @include Canela(48px, 500, 30px);
+                            color: $main-color;
+                            &--green {
+                                color: $secondary-color;
+                            }
+                        }
+                        &-text1{
+                            @include Inter(16px, 400, 160%);
+                            color: $main-color;
+                        }
+                    }
+                    &__numbers:last-child{
+                        border-right:none;
+                    }
+                }
+            }
+            &-container1{
+              &__img1{
+                position: absolute;
+                top: 404px;
+                right: 536px;
 
+              }
+              .section1-box{
+                @include flex(column, center, stretch, 20px);
+                padding: 20px;
+                background-color: $third-color;
+                border-top: 1px solid $secondary-color; 
+                border-radius: 16px;
+                position: absolute;
+                top: 667px;
+                right:132px;
+                .section1-textbox{
+                  @include flex(row, center, center, 105px);
+                  &__container{
+                    @include flex(column, center, center, 20px);
+                    &-text{
+                        @include Inter(16px, 400, 160%);
+                        color:$secondary-color;
+                    }
+                    &-text1{
+                        @include Inter(16px, 700, 120%);
+                    }
+                  }
+                }
+                &__btn{
+                    @include Inter(16px, 700, 120%);
+                    border: 1px solid $secondary-color;
+                    border-radius: 8px;
+                    padding: 12px 40px;
+                    color: $secondary-color;
+                }
+              }
+            }
+        }
+    }
+}
 
 
 @font-face {
@@ -11,3 +141,4 @@
     src: url(../fonts/CanelaText-Medium-Trial.otf) format('otf');
     font-weight: 500;
   }
+
