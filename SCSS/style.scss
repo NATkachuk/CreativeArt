@@ -212,7 +212,7 @@ body {
             }
         }
         .section4{
-            @include flex(column, center, center, 391px);
+            @include flex(column, center, center, 64px);
             &-container{
                 @include flex(row, space-between, center, 570px);
                 &__title{
