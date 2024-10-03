@@ -316,6 +316,35 @@ body {
             }
 
         }
+        .section5{
+            @include flex(row, center, center, 290px);
+            &-container{
+                @include flex(row, center, center, 30px);
+                &__img1{
+                    margin-top: 100px;
+                    margin-left: -160px;
+                }
+            }
+            &-container1{
+                @include flex(column, flex-start, flex-start, 30px);
+                &__title{
+                    @include Canela(48px, 500, 120%);
+                    &--green{
+                        color: $secondary-color;
+                    }
+                }
+                &__text{
+                    @include Inter(16px, 400, 160%);
+                    width: 81%;
+                }
+                &__label{
+                    &-input{
+                        @include Inter(16px, 400, 160%);
+                        padding: 16px 24px;
+                    }
+                }
+            }
+        }
         .title{
             @include Canela(48px, 500, 120%);
         }
