@@ -25,9 +25,9 @@ body {
     }
     .main {
         @include flex(column, flex-start, center, 140px);
+        padding: 92px 87px;
         .section1 {
             @include flex(row, flex-start, flex-start, 230px);
-            padding: 92px 111px;
             &-container {
                 @include flex(column, flex-start, flex-start, 72px);
                 width: 41%;
@@ -121,9 +121,9 @@ body {
         .section2{
             @include flex(column, center, center, 30px);
             &-container{
-                @include flex(row, center, center, 650px);
+                @include flex(row, space-between, center, 223px);
                 &__title{
-                    width: 35%;
+                    width: 40%;
                    &--green{
                     color: $secondary-color;
                    }
@@ -140,21 +140,21 @@ body {
                 background-color: $third-color;
                 &-wrapper{
                     @include flex(column, center, center, 16px);
-                    .section2__box{
+                    .section2-box{
                         @include flex(row, center, center, 42px);
-                        &-text{
+                        &__text{
                             @include Inter(24px, 700, 120%);
                         }
-                        &-cont{
+                        &__cont{
                             @include flex(row, center, center, 4px);
                             &-text{
                                 @include Inter(16px, 700, 120%);
                             }
                         }
                     }
-                    .section2__box1{
+                    .section2-box1{
                         @include flex(row, center, center, 93px);
-                        &-time{
+                        &__time{
                             @include flex(column, flex-start, flex-start, 4px);
                             &-text1{
                                 @include Inter(14px, 400, 160%);
@@ -167,7 +167,7 @@ body {
                                 }
                             }
                         }
-                        &-btn {
+                        &__btn {
                             @include Inter(16px, 700, 120%);
                             border: 1px solid $secondary-color;
                             border-radius: 8px;
@@ -177,6 +177,144 @@ body {
                     }
                 } 
             }
+        }
+        .section3{
+            @include flex(row, center, center, 391px);
+            &-container{
+                width: 40%;
+                @include flex(column, flex-start, flex-start, 20px);
+                &__title{
+                    @include Canela(48px, 500, 120%);
+                    width: 63%;
+                    &--green{
+                        color: $secondary-color;
+                    }
+                }
+                &__text{
+                    @include Inter(16px, 400, 160%);
+                    width: 82%;
+                }
+                &__btn{
+                    @include flex(row, flex-start, center, 20px);
+                    margin-top: 20px;
+                    &-button1{
+                        @include Inter(16px, 700, 120%);
+                    }
+                }
+            }
+            &-container1{
+                @include flex(row, flex-start, flex-start, 20px);
+                &__img{
+                    position: absolute;
+                    top: 1810px;
+                    right: 394px;
+                }
+            }
+        }
+        .section4{
+            @include flex(column, center, center, 391px);
+            &-container{
+                @include flex(row, space-between, center, 570px);
+                &__title{
+                    @include Canela(48px, 500, 120%);
+                    width: 27%;
+                    &--green{
+                        color: $secondary-color;
+                    }
+                }
+            }
+            &-container1{
+                @include flex(row, flex-start, flex-start, 30px);
+                &-wrapper {
+                    @include flex(column, flex-start, flex-start, 30px);
+                    &-cont {
+                        @include flex(row, flex-start, flex-start, 30px);
+                        .section4-box1{
+                            @include flex(row, flex-start, flex-start, 20px);
+                            background-image: url(../image/png/Back-Avatar1.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            padding: 239px 104px 24px 24px;
+                            &__textbox{
+                                @include flex(column, flex-start, flex-start, 4px);
+                                &-text{
+                                    @include Inter(14px, 400, 160%);
+                                }
+                                &-text1{
+                                    @include Inter(16px, 700, 120%);
+                                }
+                            }
+                          
+                        }
+                        .section4-box2{
+                            @include flex(row, flex-start, flex-start, 20px);
+                            background-image: url(../image/png/Back-Avatar2.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            padding: 239px 323px 24px 24px;
+                            &__textbox{
+                                @include flex(column, flex-start, flex-start, 4px);
+                                &-text{
+                                    @include Inter(14px, 400, 160%);
+                                }
+                                &-text1{
+                                    @include Inter(16px, 700, 120%);
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .section4-box3{
+                            @include flex(row, flex-start, flex-start, 20px);
+                            background-image: url(../image/png/Back-Avatar4.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            padding: 239px 191px 24px 24px;
+                            &__textbox{
+                                @include flex(column, flex-start, flex-start, 4px);
+                                &-text{
+                                    @include Inter(14px, 400, 160%);
+                                }
+                                &-text1{
+                                    @include Inter(16px, 700, 120%);
+                                }
+                            }
+                        }
+                        .section4-box4{
+                            @include flex(row, flex-start, flex-start, 20px);
+                            background-image: url(../image/png/Back-Avatar5.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            padding: 239px 212px 24px 24px;
+                            &__textbox{
+                                @include flex(column, flex-start, flex-start, 4px);
+                                &-text{
+                                    @include Inter(14px, 400, 160%);
+                                }
+                                &-text1{
+                                    @include Inter(16px, 700, 120%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .section4-box5{
+                    @include flex(row, flex-start, flex-start, 20px);
+                    background-image: url(../image/png/Back-Avatar3.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 580px 246px 24px 24px;
+                    &__textbox{
+                        @include flex(column, flex-start, flex-start, 4px);
+                        &-text{
+                            @include Inter(14px, 400, 160%);
+                        }
+                        &-text1{
+                            @include Inter(16px, 700, 120%);
+                        }
+                    }
+                }
+            }
+
         }
         .title{
             @include Canela(48px, 500, 120%);
