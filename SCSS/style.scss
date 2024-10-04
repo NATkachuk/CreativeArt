@@ -7,8 +7,8 @@ body {
     background-color: $bacground-color;
     color: $main-color;
     .header {
-        @include flex(row, space-between, center, 0px);
-        padding: 28px 111px;
+        @include flex(row, space-around, center, 20px);
+        
         .nav{
             &__list {
                 @include flex(row, center, center, 40px);
@@ -21,6 +21,9 @@ body {
             &__link:hover {
                 border-bottom: 2px solid $secondary-color;
             }
+        }
+        &__burger {
+            display: none;
         }
     }
     .main {
@@ -416,5 +419,33 @@ body {
     font-family: 'Canela';
     src: url(../fonts/CanelaText-Medium-Trial.otf) format('otf');
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 1512px) and (min-width: 375px) {
+    body {
+        .header {
+            padding: 0px 0px;
+            .nav {
+                display: none;
+            }
+            &__btn {
+                display: none;
+            }
+            &__burger {
+                display: block;
+            }
+        }
+    
+        .main {
+            padding: 0px 0px;
+            .section1 {
+                @include flex(column, center, center, 20px);
+                &-container {
+                    
+                }
+            }
+        }
+    }
+
   }
 
